@@ -1,5 +1,495 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-​
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo do cabeçalho */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: red;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.search-container {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+}
+/* Estilo do container dos botões de autenticação */
+.auth-buttons {
+    display: flex; /* Usando flexbox para alinhar os botões */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    margin: 20px 0; /* Margem acima e abaixo do container */
+}
+
+/* Estilo do botão de cadastro */
+.btn-register {
+    display: inline-block; 
+    background-color: #ff5722; 
+    color: white; 
+    padding: 10px 20px; 
+    border-radius: 4px; 
+    text-decoration: none; 
+    font-size: 16px; 
+    margin-right: 10px; /* Espaçamento entre os botões */
+    transition: background-color 0.3s; 
+}
+
+.btn-register:hover {
+    background-color: #e64a19; 
+}
+
+/* Estilo do botão de login */
+.btn-login {
+    display: inline-block; 
+    background-color: #4CAF50; /* Cor de fundo do botão de login */
+    color: white; 
+    padding: 10px 20px; 
+    border-radius: 4px; 
+    text-decoration: none; 
+    font-size: 16px; 
+    transition: background-color 0.3s; 
+}
+
+.btn-login:hover {
+    background-color: #45a049; /* Cor do botão ao passar o mouse */
+}
+
+
+.btn-register:hover {
+    background-color: #e64a19; /* Cor do botão ao passar o mouse */
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+}
+
+.botao-usuario{
+  text-align: center;
+}
+.user-area-btn {
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.user-area-btn:hover {
+    background-color: #45a049;
+}
+
+.cart-container {
+    margin-top: 20px; /* Espaço acima do carrinho */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #fff; /* Fundo branco */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.cart-items {
+    margin-bottom: 15px; /* Espaço abaixo dos itens do carrinho */
+}
+
+.cart-total {
+    font-size: 18px; /* Tamanho da fonte do total */
+    text-align: right; /* Alinha o texto à direita */
+    color: #333; /* Cor do texto */
+}
+/* Menu hamburguer */
+.menu-toggle {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estilo do menu */
+.menu {
+    display: none;
+    background-color: red;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    text-align: center;
+}
+
+.menu ul {
+    list-style-type: none;
+}
+
+.menu ul li {
+    padding: 10px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu ul li a:hover {
+    background-color: #555;
+}
+
+/* Estilo para o container dos cards */
+.offers-title {
+    display: inline-block; /* Faz com que o background ocupe apenas o tamanho do texto */
+    background-color: #ff5722; /* Cor de fundo do título */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Adiciona espaço ao redor do texto */
+    border-radius: 5px; /* Arredonda as bordas do fundo */
+    text-align: center; /* Centraliza o texto */
+    margin: 20px auto; /* Centraliza o título na página */
+}
+
+.product-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Estilo individual para cada card */
+.card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+    padding: 16px;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Estilo para a imagem do produto */
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+/* Estilo para o título do produto */
+.card h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+/* Estilo para o preço */
+.price {
+    font-size: 16px;
+    color: #ff5722;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Estilo para o botão de comprar */
+.btn-buy {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-buy:hover {
+    background-color: #ff5722;
+}
+
+@media (max-width: 600px) {
+    .product-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+
+/* Estilo para o banner */
+.banner {
+    background-image: url('banner.jpg'); /* Substitua 'banner.jpg' pela URL da imagem que deseja usar */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 20px;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo sobre a imagem, para destacar o texto */
+    z-index: 1;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+}
+
+.banner h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Botão no banner */
+.btn-banner {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-banner:hover {
+    background-color: #e64a19;
+}
+
+@media (max-width: 600px) {
+    .banner {
+        height: 180px;
+        padding: 20px 10px;
+    }
+
+    .banner h2 {
+        font-size: 24px;
+    }
+
+    .banner p {
+        font-size: 14px;
+    }
+
+    .btn-banner {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+/* Estilos gerais para o container dos cupons */
+.coupon-container {
+    overflow-x: auto; /* Permite rolagem horizontal */
+    padding: 1rem;
+}
+
+.coupon-wrapper {
+    display: flex;
+    gap: 1rem;
+    min-width: max-content; /* Evita que os cards quebrem para a próxima linha */
+}
+
+/* Estilos para cada card de cupom */
+.coupon-card {
+    flex: 0 0 200px; /* Define uma largura fixa para os cards */
+    max-width: 200px; /* Limita a largura dos cards */
+    border: 2px solid #ff5722;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Animação ao passar o mouse */
+.coupon-card:hover {
+    transform: scale(1.05); /* Aumenta o card ao passar o mouse */
+}
+
+/* Título do desconto */
+.coupon-card h3 {
+    font-size: 1.5rem;
+    color: #ff5722;
+    margin: 0.5rem 0;
+}
+
+/* Descrição do cupom */
+.coupon-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Botão para usar o cupom */
+.coupon-card button {
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.coupon-card button:hover {
+    background-color: #e64a19;
+}
+
+/* Esconde as barras de rolagem para uma aparência mais limpa (opcional) */
+.coupon-container::-webkit-scrollbar {
+    display: none;
+}
+
+.coupon-container {
+    -ms-overflow-style: none; /* Para IE e Edge */
+    scrollbar-width: none; /* Para Firefox */
+}
+
+/* Estilos gerais para o contêiner do carrossel */
+.supermarket-carousel {
+    overflow-x: auto; /* Permite rolagem horizontal */
+    padding: 1rem;
+    white-space: nowrap; /* Impede quebras de linha dentro do contêiner */
+}
+
+/* Contêiner flexível para os cards */
+.supermarket-wrapper {
+    display: flex;
+    gap: 1rem;
+    min-width: max-content; /* Evita que os cards quebrem para a próxima linha */
+}
+
+/* Estilos para cada card de supermercado */
+.supermarket-card {
+    flex: 0 0 150px; /* Define uma largura fixa para os cards */
+    max-width: 150px; /* Limita a largura dos cards */
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Animação ao passar o mouse */
+.supermarket-card:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para a imagem do supermercado */
+.supermarket-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+/* Nome do supermercado */
+.supermarket-card p {
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+}
+
+/* Esconde a barra de rolagem para uma aparência mais limpa (opcional) */
+.supermarket-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.supermarket-carousel {
+    -ms-overflow-style: none; /* Para IE e Edge */
+    scrollbar-width: none; /* Para Firefox */
+}
+
+/* Estilo para o footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ff5722;
+}
+
+.footer-section p,
+.footer-section a {
+    font-size: 16px;
+    color: #ddd;
+    text-decoration: none;
+    margin: 5px 0;
+    display: block;
+}
+
+.footer-section a:hover {
+    color: #ff5722;
+}
+
+/* Links das redes sociais */
+.social-links a {
+    margin: 0 5px;
+    color: #ddd;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.social-links a:hover {
+    color: #ff5722;
+}
+
 /* Botão de apoio */
 .btn-support {
     background-color: #ff5722;
@@ -11,17 +501,17 @@
     cursor: pointer;
     transition: background-color 0.3s;
 }
-​
+
 .btn-support:hover {
     background-color: #e64a19;
 }
-​
+
 @media (max-width: 600px) {
     .footer {
         flex-direction: column;
         align-items: center;
     }
-​
+
     .footer-section {
         text-align: center;
     }
@@ -35,8 +525,7 @@
     border-radius: 4px; /* Bordas arredondadas do botão */
     cursor: pointer; /* Cursor de mão ao passar o mouse */
 }
-​
+
 .btn-remove:hover {
     background-color: #d32f2f; /* Cor ao passar o mouse */
 }
-​
