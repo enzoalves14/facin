@@ -79,6 +79,30 @@ body {
     background-color: #e64a19; /* Cor do botão ao passar o mouse */
 }
 
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+}
+
+.botao-usuario{
+  text-align: center;
+}
+.user-area-btn {
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.user-area-btn:hover {
+    background-color: #45a049;
+}
+
 .cart-container {
     margin-top: 20px; /* Espaço acima do carrinho */
     padding: 20px; /* Espaçamento interno */
@@ -290,6 +314,133 @@ body {
         padding: 8px 16px;
         font-size: 14px;
     }
+}
+
+/* Estilos gerais para o container dos cupons */
+.coupon-container {
+    overflow-x: auto; /* Permite rolagem horizontal */
+    padding: 1rem;
+}
+
+.coupon-wrapper {
+    display: flex;
+    gap: 1rem;
+    min-width: max-content; /* Evita que os cards quebrem para a próxima linha */
+}
+
+/* Estilos para cada card de cupom */
+.coupon-card {
+    flex: 0 0 200px; /* Define uma largura fixa para os cards */
+    max-width: 200px; /* Limita a largura dos cards */
+    border: 2px solid #ff5722;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Animação ao passar o mouse */
+.coupon-card:hover {
+    transform: scale(1.05); /* Aumenta o card ao passar o mouse */
+}
+
+/* Título do desconto */
+.coupon-card h3 {
+    font-size: 1.5rem;
+    color: #ff5722;
+    margin: 0.5rem 0;
+}
+
+/* Descrição do cupom */
+.coupon-card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Botão para usar o cupom */
+.coupon-card button {
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.coupon-card button:hover {
+    background-color: #e64a19;
+}
+
+/* Esconde as barras de rolagem para uma aparência mais limpa (opcional) */
+.coupon-container::-webkit-scrollbar {
+    display: none;
+}
+
+.coupon-container {
+    -ms-overflow-style: none; /* Para IE e Edge */
+    scrollbar-width: none; /* Para Firefox */
+}
+
+/* Estilos gerais para o contêiner do carrossel */
+.supermarket-carousel {
+    overflow-x: auto; /* Permite rolagem horizontal */
+    padding: 1rem;
+    white-space: nowrap; /* Impede quebras de linha dentro do contêiner */
+}
+
+/* Contêiner flexível para os cards */
+.supermarket-wrapper {
+    display: flex;
+    gap: 1rem;
+    min-width: max-content; /* Evita que os cards quebrem para a próxima linha */
+}
+
+/* Estilos para cada card de supermercado */
+.supermarket-card {
+    flex: 0 0 150px; /* Define uma largura fixa para os cards */
+    max-width: 150px; /* Limita a largura dos cards */
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Animação ao passar o mouse */
+.supermarket-card:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para a imagem do supermercado */
+.supermarket-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+/* Nome do supermercado */
+.supermarket-card p {
+    font-size: 1rem;
+    color: #333;
+    margin: 0;
+}
+
+/* Esconde a barra de rolagem para uma aparência mais limpa (opcional) */
+.supermarket-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.supermarket-carousel {
+    -ms-overflow-style: none; /* Para IE e Edge */
+    scrollbar-width: none; /* Para Firefox */
 }
 
 /* Estilo para o footer */
